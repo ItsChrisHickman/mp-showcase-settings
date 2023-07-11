@@ -1,0 +1,313 @@
+[
+  {
+    "section": "Features",
+    "settings": [
+      {
+        "param": "features/sweep_pucks"
+      },
+      {
+        "param": "features/360_views"
+      },
+      {
+        "param": "features/tiled_mesh"
+      },
+      {
+        "param": "features/labels"
+      },
+      {
+        "param": "features/mattertags"
+      },
+      {
+        "param": "features/floorselect"
+      },
+      {
+        "param": "features/roomnav"
+      },
+      {
+        "param": "ToursMetersPerSecond",
+        "rangeStart": 0.25,
+        "rangeEnd": 10
+      },
+      {
+        "param": "features/measurements-nudge",
+        "desc": "Prompt to try Measurements"
+      },
+      {
+        "param": "features/dollhouse-nudge",
+        "desc": "Prompt to try new Dollhouse features"
+      },
+
+      {
+        "param": "features/model-rating-dialog",
+        "desc": "Prompt to rate model satisfaction"
+      },
+      {
+        "param": "features/model-rating-dialog-prompt",
+        "desc": "Prompt to rate model satisfaction"
+      },
+      {
+        "param": "features/space-search"
+      },
+      {
+        "param": "subscriber-prompt-active"
+      },
+      {
+        "param": "features/mds_prefetch"
+      },
+      {
+        "param": "features/tagIcons"
+      },
+      {
+        "param": "TAG_BILLBOARD_SHARE"
+      },
+      {
+        "param": "TAG_BILLBOARD_DOCK"
+      },
+      {
+        "param": "features/meta_link"
+      },
+      {
+        "param": "features/xr_browser_lock"
+      },
+      {
+        "param": "feature/room_bounds"
+      }
+    ]
+  },
+  {
+    "section": "Player_options",
+    "settings": [
+      {
+        "param": "presented_by"
+      },
+      {
+        "param": "highlight_reel"
+      },
+      {
+        "param": "floor_plan"
+      },
+      {
+        "param": "tour_buttons"
+      },
+      {
+        "param": "labels"
+      },
+      {
+        "param": "labels_dh"
+      },
+      {
+        "param": "measurements"
+      },
+      {
+        "param": "floor_select"
+      },
+      {
+        "param": "measurements_saved"
+      },
+      {
+        "param": "dollhouse"
+      },
+      {
+        "param": "fast_transitions"
+      },
+      {
+        "param": "transition_speed",
+        "rangeStart": 0,
+        "rangeEnd": 10000
+      },
+      {
+        "param": "transition_time",
+        "rangeStart": 0,
+        "rangeEnd": 10000
+      },
+      {
+        "param": "pan_speed",
+        "rangeStart": 0,
+        "rangeEnd": 10000
+      },
+      {
+        "param": "dollhouse_pan_speed",
+        "rangeStart": 0,
+        "rangeEnd": 20
+      },
+      {
+        "param": "zoom_duration",
+        "rangeStart": 0,
+        "rangeEnd": 100000
+      },
+      {
+        "param": "pan_angle",
+        "rangeStart": 0,
+        "rangeEnd": 360
+      },
+      {
+        "param": "pan_direction",
+        "rangeStart": 0,
+        "rangeEnd": 10
+      },
+      {
+        "param": "unit_type",
+        "options": ["imperial", "metric"]
+      },
+      {
+        "param": "contact_email"
+      },
+      {
+        "param": "address"
+      },
+      {
+        "param": "contact_name"
+      },
+      {
+        "param": "model_summary"
+      },
+      {
+        "param": "contact_phone"
+      },
+      {
+        "param": "model_name"
+      },
+      {
+        "param": "external_url"
+      },
+      {
+        "param": "background_color",
+        "options": ["black", "white", "grey"]
+      },
+      {
+        "param": "space_search"
+      },
+      {
+        "param": "TransitionType",
+        "rangeStart": 0,
+        "rangeEnd": 10
+      }
+    ]
+  },
+  {
+    "section": "Model Options",
+    "settings": [
+      {
+        "param": "social_sharing"
+      },
+      {
+        "param": "is_public"
+      },
+      {
+        "param": "is_vr"
+      },
+      {
+        "param": "presentation_about"
+      },
+      {
+        "param": "presentation_title"
+      },
+      {
+        "param": "branding_enabled"
+      },
+      {
+        "param": "presentation_mls_mode"
+      },
+      {
+        "param": "TAG_NAV_OVERLAY"
+      }
+    ]
+  },
+  {
+    "section": "Wireframe",
+    "settings": [
+      {
+        "param": "wireframeEnabled"
+      },
+      {
+        "param": "thickness",
+        "rangeStart": 0.1,
+        "rangeEnd": 10
+      },
+      {
+        "param": "wireframeOpacity",
+        "rangeStart": 0.01,
+        "rangeEnd": 1
+      },
+      {
+        "param": "stroke",
+        "text": true
+      },
+      {
+        "param": "fillEnabled"
+      },
+      {
+        "param": "fill",
+        "text": true
+      },
+      {
+        "param": "insideAltColor"
+      },
+      {
+        "param": "dualStroke"
+      },
+      {
+        "param": "secondThickness",
+        "rangeStart": 0.1,
+        "rangeEnd": 10
+      }
+    ]
+  },
+  {
+    "section": "Wireframe Dashes",
+    "settings": [
+      {
+        "param": "dashEnabled"
+      },
+      {
+        "param": "dashAnimate"
+      },
+      {
+        "param": "dashOverlap"
+      }
+    ]
+  },
+  {
+    "section": "Wireframe Advanced",
+    "settings": [
+      {
+        "param": "squeeze"
+      },
+      {
+        "param": "squeezeMin",
+        "rangeStart": 0.1,
+        "rangeEnd": 10
+      },
+      {
+        "param": "squeezeMax",
+        "rangeStart": 0.1,
+        "rangeEnd": 10
+      }
+    ]
+  },
+  {
+    "section": "Quick settings",
+    "settings": [
+      {
+        "param": "Trim floor by(%)",
+        "rangeStart": 0,
+        "rangeEnd": 100
+      },
+      {
+        "param": "Rotation speed",
+        "rangeStart": 0,
+        "rangeEnd": 10
+      },
+      {
+        "param": "Transition time",
+        "rangeStart": 0,
+        "rangeEnd": 5000
+      },
+      {
+        "param": "TourSpeed &wts",
+        "rangeStart": 0.5,
+        "rangeEnd": 10
+      }
+    ]
+  }
+]

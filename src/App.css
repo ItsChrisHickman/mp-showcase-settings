@@ -1,0 +1,89 @@
+body {
+  font-family: 'IBM Plex Sans', sans-serif;
+  font-size: 15px;
+  font-weight: 400;
+  line-height: 1.4;
+  background: #000;
+  padding: 0;
+  margin: 0;
+}
+header {
+  line-height: 80px;
+  background-color: #222222;
+  color: #fff;
+  padding: 0 40px;
+  display: flex;
+  flex-direction: row;
+}
+header h1 {
+  padding: 0;
+  margin: 0;
+  font-weight: 100;
+  line-height: 80px;
+  font-size: 24px;
+  float: left;
+  width: 75%;
+}
+header a {
+  float: left;
+  width: 25%;
+  text-align: right;
+  text-decoration: none;
+  text-transform: uppercase;
+  font-weight: bold;
+}
+article {
+  margin: 40px;
+  border-radius: 20px;
+  box-shadow: 0 4px 8px rgb(43, 43, 43, 0.25);
+}
+footer {
+  background-color: #222222;
+  color: #fff;
+  padding: 40px;
+  font-size: 18px;
+}
+footer > * {
+  display: block;
+  margin: 0px auto 1.5em auto;
+  max-width: 960px;
+  line-height: 1.5em;
+  font-size: 14px;
+}
+footer h2 {
+  font-size: 24px;
+}
+header a,
+footer a {
+  color: #ff3158;
+}
+article {
+  text-align: center;
+}
+iframe {
+  border: 1px solid #333;
+  border-radius: 20px;
+}
+b {
+  color: #00ff00;
+}
+
+button {
+  line-height: 40px;
+  padding: 0 40px;
+}
+
+ul#settings {
+  columns: 3;
+  -webkit-columns: 3;
+  -moz-columns: 3;
+  list-style: none;
+}
+ul#settings li {
+  clear: both;
+}
+input[type='text'],
+select {
+  float: right;
+  width: 150px;
+}
