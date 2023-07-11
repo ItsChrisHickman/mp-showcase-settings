@@ -31,28 +31,7 @@ header a {
   text-transform: uppercase;
   font-weight: bold;
 }
-article {
-  margin: 40px;
-  border-radius: 20px;
-  box-shadow: 0 4px 8px rgb(43, 43, 43, 0.25);
-}
-footer {
-  color: #fff;
-  padding: 40px;
-  font-size: 18px;
-}
-footer > * {
-  display: block;
-  margin: 0px auto 1.5em auto;
-  max-width: 960px;
-  line-height: 1.5em;
-  font-size: 14px;
-}
-footer h2 {
-  font-size: 24px;
-}
-header a,
-footer a {
+a {
   color: #ff3158;
 }
 iframe {
