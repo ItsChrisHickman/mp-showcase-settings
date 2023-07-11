@@ -41,6 +41,7 @@ export default function App() {
           <b>Changelog</b>
         </p>
         <ul>
+          <li>2023/07/11 - Migrated to Refactored with React.js</li>
           <li>2023/07/09 - Refactored with React.js</li>
           <li>
             2022/12/20 - Added deserialization for fill and stroke -- Cannot
