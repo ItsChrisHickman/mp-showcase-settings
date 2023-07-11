@@ -1,5 +1,6 @@
 import * as React from 'react';
 import { useEffect, useState } from 'react';
+import TextField from '@mui/material/TextField';
 
 export function ValueItem({ setting, sdk }) {
   const [text, setText] = useState('');
@@ -22,10 +23,10 @@ export function ValueItem({ setting, sdk }) {
   }, [sdk]);
   const handleChange = (event) => {
     if (event.target.name === 'stroke' || event.target.name === 'fill') {
-      sdk.Settings.update(event.target.name, JSON.parse(event.target.value));
+      sdk.Settings.update(setting.param, JSON.parse(event.target.value));
       console.log(
         "sdk.Settings.update('" +
-          event.target.name +
+          setting.param +
           "', '" +
           JSON.parse(event.target.value) +
           "')"
@@ -34,7 +35,7 @@ export function ValueItem({ setting, sdk }) {
       sdk.Settings.update(event.target.name, event.target.value);
       console.log(
         "sdk.Settings.update('" +
-          event.target.name +
+          setting.param +
           "', '" +
           event.target.value +
           "')"
@@ -42,14 +43,14 @@ export function ValueItem({ setting, sdk }) {
     }
   };
   return (
-    <label>
-      <input
+    <>
+      <TextField
+        fullWidth
         type="text"
-        name={setting.param}
+        label={setting.param}
         value={text}
         onChange={handleChange}
       />
-      {setting.param}
-    </label>
+    </>
   );
 }

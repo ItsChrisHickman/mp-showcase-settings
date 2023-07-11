@@ -1,9 +1,10 @@
 import * as React from 'react';
 import { useEffect, useState } from 'react';
+import TextField from '@mui/material/TextField';
+import MenuItem from '@mui/material/MenuItem';
 
 export function OptionItem({ setting, sdk }) {
   const [value, setValue] = useState('');
-  const [dropDownOptions, setDropDownOptions] = useState([]);
   useEffect(() => {
     const fetchData = async () => {
       if (sdk !== null) {
@@ -19,38 +20,26 @@ export function OptionItem({ setting, sdk }) {
       }
     };
     fetchData().catch(console.error);
-    const dropDownOptions = setting.options.map((x) => ({
-      label: x,
-      value: x,
-    }));
-    setDropDownOptions(dropDownOptions);
   }, [sdk]);
   const handleChange = (event) => {
-    sdk.Settings.update(event.target.name, event.target.value);
+    sdk.Settings.update(setting.param, event.value);
     console.log(
-      "sdk.Settings.update('" +
-        event.target.name +
-        "', '" +
-        event.target.value +
-        "')"
+      "sdk.Settings.update('" + setting.param + "', '" + event.value + "')"
     );
   };
+  const dropDownOptions = setting.options.map((x) => ({
+    label: x,
+    value: x,
+  }));
   return (
-    <label>
-      <select
-        id={setting.param}
-        name={setting.param}
-        onChange={handleChange}
-        defaultValue={value}
-        options={dropDownOptions}
-      >
-        {setting.options.map((option) => (
-          <option key={option} value={option}>
-            {option}
-          </option>
+    <>
+      <TextField select fullWidth label={setting.param} value={value}>
+        {dropDownOptions.map((option) => (
+          <MenuItem key={option.value} value={option.value}>
+            {option.label}
+          </MenuItem>
         ))}
-      </select>
-      {setting.param}
-    </label>
+      </TextField>
+    </>
   );
 }

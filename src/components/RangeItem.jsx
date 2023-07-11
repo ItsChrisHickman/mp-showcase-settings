@@ -1,4 +1,6 @@
 import * as React from 'react';
+import Typography from '@mui/material/Typography';
+import Slider from '@mui/material/Slider';
 import { useEffect, useState } from 'react';
 
 export function RangeItem({ setting, sdk }) {
@@ -20,25 +22,26 @@ export function RangeItem({ setting, sdk }) {
     fetchData().catch(console.error);
   }, [sdk]);
   const handleChange = (event) => {
-    sdk.Settings.update(event.target.name, event.target.value);
+    sdk.Settings.update(setting.param, event.target.value);
     console.log(
       "sdk.Settings.update('" +
-        event.target.name +
+        setting.param +
         "', '" +
         event.target.value +
         "')"
     );
   };
   return (
-    <label>
-      <input
-        type="text"
-        id={setting.param}
-        name={setting.param}
-        onChange={handleChange}
+    <>
+      <Typography gutterBottom>{setting.param}</Typography>
+      <Slider
         value={value}
+        aria-label={setting.param}
+        min={setting.rangeStart}
+        max={setting.rangeEnd}
+        valueLabelDisplay="auto"
+        onChange={handleChange}
       />
-      {setting.param}
-    </label>
+    </>
   );
 }

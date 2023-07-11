@@ -1,5 +1,7 @@
 import * as React from 'react';
 import { useEffect, useState } from 'react';
+import Switch from '@mui/material/Switch';
+import FormControlLabel from '@mui/material/FormControlLabel';
 
 export function CheckBoxItem({ setting, sdk }) {
   const [checked, setChecked] = useState(false);
@@ -18,24 +20,25 @@ export function CheckBoxItem({ setting, sdk }) {
   }, [sdk]);
   const handleChange = (event) => {
     setChecked(!checked);
-    sdk.Settings.update(event.target.name, event.target.checked);
+    console.log(event);
+    sdk.Settings.update(setting.param, event.target.checked);
     console.log(
       "sdk.Settings.update('" +
-        event.target.name +
+        setting.param +
         "', '" +
         event.target.checked +
         "')"
     );
   };
+  const label = { inputProps: { 'aria-label': setting.param } };
   return (
-    <label>
-      <input
-        type="checkbox"
-        name={setting.param}
-        checked={checked}
-        onChange={handleChange}
+    <>
+      <FormControlLabel
+        control={
+          <Switch {...label} checked={checked} onChange={handleChange} />
+        }
+        label={setting.param}
       />
-      {setting.param}
-    </label>
+    </>
   );
 }

@@ -3,13 +3,12 @@ body {
   font-size: 15px;
   font-weight: 400;
   line-height: 1.4;
-  background: #000;
   padding: 0;
   margin: 0;
+  color: #fff;
 }
 header {
   line-height: 80px;
-  background-color: #222222;
   color: #fff;
   padding: 0 40px;
   display: flex;
@@ -38,7 +37,6 @@ article {
   box-shadow: 0 4px 8px rgb(43, 43, 43, 0.25);
 }
 footer {
-  background-color: #222222;
   color: #fff;
   padding: 40px;
   font-size: 18px;
@@ -57,33 +55,16 @@ header a,
 footer a {
   color: #ff3158;
 }
-article {
-  text-align: center;
-}
 iframe {
   border: 1px solid #333;
   border-radius: 20px;
 }
-b {
-  color: #00ff00;
-}
-
-button {
-  line-height: 40px;
-  padding: 0 40px;
-}
-
 ul#settings {
-  columns: 3;
-  -webkit-columns: 3;
-  -moz-columns: 3;
+  columns: 2;
+  -webkit-columns: 2;
+  -moz-columns: 2;
   list-style: none;
 }
-ul#settings li {
-  clear: both;
-}
-input[type='text'],
-select {
-  float: right;
-  width: 150px;
+li {
+  break-inside: avoid-column;
 }
