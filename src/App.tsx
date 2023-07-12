@@ -7,6 +7,7 @@ import Box from '@mui/material/Box';
 
 import { Showcase } from './components/Showcase';
 import { SettingsList } from './components/SettingsList';
+import ThemeProvider from '@mui/material/styles/ThemeProvider';
 export default function App() {
   const [sdk, setSdk] = useState(null);
   useEffect(() => {
@@ -23,12 +24,6 @@ export default function App() {
     console.log('SDK Connected and Loaded', mpSdk);
     setSdk(mpSdk);
   }
-
-  const darkTheme = createTheme({
-    palette: {
-      mode: 'dark',
-    },
-  });
 
   return (
     <div className="App">

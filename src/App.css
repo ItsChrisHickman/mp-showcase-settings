@@ -1,25 +1,12 @@
 body {
-  font-family: 'IBM Plex Sans', sans-serif;
-  font-size: 15px;
-  font-weight: 400;
-  line-height: 1.4;
-  padding: 0;
-  margin: 0;
-  color: #fff;
+  background: #011e3c;
 }
 header {
-  line-height: 80px;
-  color: #fff;
   padding: 0 40px;
   display: flex;
   flex-direction: row;
 }
 header h1 {
-  padding: 0;
-  margin: 0;
-  font-weight: 100;
-  line-height: 80px;
-  font-size: 24px;
   float: left;
   width: 75%;
 }
@@ -30,6 +17,9 @@ header a {
   text-decoration: none;
   text-transform: uppercase;
   font-weight: bold;
+}
+.MuiBox-root {
+  background: #0b1929;
 }
 a {
   color: #ff3158;

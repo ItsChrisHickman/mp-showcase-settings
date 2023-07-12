@@ -1,6 +1,8 @@
 import * as React from 'react';
 import { useEffect, useState } from 'react';
+import Box from '@mui/material/Box';
 import { Setting } from './Setting';
+
 export function SettingsList({ sdk }) {
   const [settings, setSettings] = useState([]);
   // The Effect Hook lets you perform side effects in function components:
@@ -15,14 +17,24 @@ export function SettingsList({ sdk }) {
   return (
     <>
       {settings.map((section, index) => (
-        <fieldset key={section.section}>
-          <legend key={section.section}>{section.section}</legend>
+        <Box
+          component="fieldset"
+          key={section.section}
+          sx={{
+            backgroundColor: '#000',
+            '&:hover': {
+              backgroundColor: '#111',
+              opacity: [0.9, 0.8, 0.7],
+            },
+          }}
+        >
+          <legend>{section.section}</legend>
           <ul id="settings">
             {section.settings.map((setting, index2) => (
               <Setting key={index2} setting={setting} index={index} sdk={sdk} />
             ))}
           </ul>
-        </fieldset>
+        </Box>
       ))}
     </>
   );
