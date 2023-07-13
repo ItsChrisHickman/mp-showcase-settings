@@ -4,10 +4,9 @@ import { useEffect, useState } from 'react';
 import CssBaseline from '@mui/material/CssBaseline';
 import Container from '@mui/material/Container';
 import Box from '@mui/material/Box';
-
 import { Showcase } from './components/Showcase';
 import { SettingsList } from './components/SettingsList';
-import ThemeProvider from '@mui/material/styles/ThemeProvider';
+
 export default function App() {
   const [sdk, setSdk] = useState(null);
   useEffect(() => {
