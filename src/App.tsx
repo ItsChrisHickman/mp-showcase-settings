@@ -43,7 +43,7 @@ export default function App() {
             known settings.
           </p>
         </Box>
-        <Box>
+        <Box id="settingList">
           <SettingsList sdk={sdk} />
         </Box>
         <Box>
