@@ -34,3 +34,7 @@ ul#settings {
 li {
   break-inside: avoid-column;
 }
+#settingList {
+  height: 500px;
+  overflow-y: auto;
+}
