@@ -3,7 +3,7 @@ import { useEffect, useState } from 'react';
 import Switch from '@mui/material/Switch';
 import FormControlLabel from '@mui/material/FormControlLabel';
 
-export function CheckBoxItem({ setting, sdk }) {
+export default function CheckBoxItem({ setting, sdk }) {
   const [checked, setChecked] = useState(false);
   useEffect(() => {
     const fetchData = async () => {

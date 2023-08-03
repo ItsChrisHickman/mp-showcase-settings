@@ -3,7 +3,7 @@ import Typography from '@mui/material/Typography';
 import Slider from '@mui/material/Slider';
 import { useEffect, useState } from 'react';
 
-export function RangeItem({ setting, sdk }) {
+export default function RangeItem({ setting, sdk }) {
   const [value, setValue] = useState(0);
   useEffect(() => {
     const fetchData = async () => {

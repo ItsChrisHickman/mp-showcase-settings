@@ -2,7 +2,7 @@ import * as React from 'react';
 import { useEffect, useState } from 'react';
 import TextField from '@mui/material/TextField';
 
-export function ValueItem({ setting, sdk }) {
+export default function ValueItem({ setting, sdk }) {
   const [text, setText] = useState('');
   useEffect(() => {
     const fetchData = async () => {

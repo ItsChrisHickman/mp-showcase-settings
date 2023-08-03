@@ -1,11 +1,11 @@
 import * as React from 'react';
 import { useEffect, useState } from 'react';
-import { RangeItem } from './RangeItem';
-import { ValueItem } from './ValueItem';
-import { OptionItem } from './OptionItem';
-import { CheckBoxItem } from './CheckBoxItem';
+import RangeItem from './RangeItem';
+import ValueItem from './ValueItem';
+import OptionItem from './OptionItem';
+import CheckBoxItem from './CheckBoxItem';
 
-export function Setting({ setting, sdk }) {
+export default function Setting({ setting, sdk }) {
   const [settingType, setSettingType] = useState('');
   useEffect(() => {
     if (setting.rangeStart !== undefined) {

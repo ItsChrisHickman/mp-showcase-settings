@@ -3,7 +3,7 @@ import { useEffect, useState } from 'react';
 import TextField from '@mui/material/TextField';
 import MenuItem from '@mui/material/MenuItem';
 
-export function OptionItem({ setting, sdk }) {
+export default function OptionItem({ setting, sdk }) {
   const [value, setValue] = useState('');
   useEffect(() => {
     const fetchData = async () => {

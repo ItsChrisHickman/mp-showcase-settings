@@ -1,6 +1,6 @@
 import * as React from 'react';
 
-export function Showcase({ onConnect }) {
+export default function Showcase({ onConnect }) {
   const sdkKey = 'yxszifc05b1bidcsqfr60806d';
   async function handleLoad() {
     const iframe = document.getElementById('showcase');

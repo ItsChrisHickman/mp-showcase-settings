@@ -1,9 +1,20 @@
 import * as React from 'react';
 import { useEffect, useState } from 'react';
 import Box from '@mui/material/Box';
-import { Setting } from './Setting';
+import Paper from '@mui/material/Paper';
+import Item from '@mui/material/Item';
+import Setting from './Setting';
+import Typography from '@mui/material/Typography';
+import { createTheme, ThemeProvider, styled } from '@mui/material/styles';
 
-export function SettingsList({ sdk }) {
+const Item = styled(Paper)(({ theme }) => ({
+  ...theme.typography.body2,
+  textAlign: 'left',
+  color: theme.palette.text.secondary,
+  lineHeight: '40px',
+}));
+
+export default function SettingsList({ sdk }) {
   const [settings, setSettings] = useState([]);
   // The Effect Hook lets you perform side effects in function components:
   useEffect(() => {
@@ -18,22 +29,31 @@ export function SettingsList({ sdk }) {
     <>
       {settings.map((section, index) => (
         <Box
-          component="fieldset"
-          key={section.section}
           sx={{
-            backgroundColor: '#000',
-            '&:hover': {
-              backgroundColor: '#111',
-              opacity: [0.9, 0.8, 0.7],
-            },
+            width: '100%',
+            p: 2,
+            bgcolor: 'background.default',
           }}
         >
-          <legend>{section.section}</legend>
-          <ul id="settings">
-            {section.settings.map((setting, index2) => (
-              <Setting key={index2} setting={setting} index={index} sdk={sdk} />
-            ))}
-          </ul>
+          <Item
+            key={index}
+            elevation={5}
+            sx={{ width: '100%', padding: '1rem' }}
+          >
+            <Typography variant="h6" component="h2" gutterBottom>
+              {section.section}
+            </Typography>
+            <ul id="settings">
+              {section.settings.map((setting, index2) => (
+                <Setting
+                  key={index2}
+                  setting={setting}
+                  index={index}
+                  sdk={sdk}
+                />
+              ))}
+            </ul>
+          </Item>
         </Box>
       ))}
     </>
