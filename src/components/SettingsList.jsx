@@ -29,6 +29,7 @@ export default function SettingsList({ sdk }) {
     <>
       {settings.map((section, index) => (
         <Box
+          key={'box' + index}
           sx={{
             width: '100%',
             p: 2,

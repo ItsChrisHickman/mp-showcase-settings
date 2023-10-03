@@ -4,7 +4,7 @@ import Slider from '@mui/material/Slider';
 import { useEffect, useState } from 'react';
 
 export default function RangeItem({ setting, sdk }) {
-  const [value, setValue] = useState(0);
+  const [value, setValue] = useState('');
   useEffect(() => {
     const fetchData = async () => {
       if (sdk !== null) {

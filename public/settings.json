@@ -64,13 +64,36 @@
         "param": "TAG_BILLBOARD_DOCK"
       },
       {
-        "param": "features/meta_link"
-      },
-      {
         "param": "features/xr_browser_lock"
+      }
+    ]
+  },
+  {
+    "section": "Model Options",
+    "settings": [
+      {
+        "param": "social_sharing"
       },
       {
-        "param": "feature/room_bounds"
+        "param": "is_public"
+      },
+      {
+        "param": "is_vr"
+      },
+      {
+        "param": "presentation_about"
+      },
+      {
+        "param": "presentation_title"
+      },
+      {
+        "param": "branding_enabled"
+      },
+      {
+        "param": "presentation_mls_mode"
+      },
+      {
+        "param": "TAG_NAV_OVERLAY"
       }
     ]
   },
@@ -85,6 +108,9 @@
       },
       {
         "param": "floor_plan"
+      },
+      {
+        "param": "room_bounds"
       },
       {
         "param": "tour_buttons"
@@ -185,35 +211,6 @@
     ]
   },
   {
-    "section": "Model Options",
-    "settings": [
-      {
-        "param": "social_sharing"
-      },
-      {
-        "param": "is_public"
-      },
-      {
-        "param": "is_vr"
-      },
-      {
-        "param": "presentation_about"
-      },
-      {
-        "param": "presentation_title"
-      },
-      {
-        "param": "branding_enabled"
-      },
-      {
-        "param": "presentation_mls_mode"
-      },
-      {
-        "param": "TAG_NAV_OVERLAY"
-      }
-    ]
-  },
-  {
     "section": "Wireframe",
     "settings": [
       {
@@ -282,6 +279,14 @@
         "param": "squeezeMax",
         "rangeStart": 0.1,
         "rangeEnd": 10
+      }
+    ]
+  },
+  {
+    "section": "Measurement Debug",
+    "settings": [
+      {
+        "param": "measure/fp_in_dh"
       }
     ]
   },
