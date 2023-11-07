@@ -4,7 +4,7 @@ import Slider from '@mui/material/Slider';
 import { useEffect, useState } from 'react';
 
 export default function RangeItem({ setting, sdk }) {
-  const [value, setValue] = useState('');
+  const [value, setValue] = useState(0);
   useEffect(() => {
     const fetchData = async () => {
       if (sdk !== null) {
@@ -13,7 +13,8 @@ export default function RangeItem({ setting, sdk }) {
         );
         await sdk.Settings.get(setting.param).then((data) => {
           if (data === null) {
-            data = '';
+            console.log('Warning - ' + setting.param + ' returned NULL');
+            data = 0;
           }
           setValue(data);
         });
@@ -22,6 +23,7 @@ export default function RangeItem({ setting, sdk }) {
     fetchData().catch(console.error);
   }, [sdk]);
   const handleChange = (event) => {
+    setValue(event.target.value);
     sdk.Settings.update(setting.param, event.target.value);
     console.log(
       "sdk.Settings.update('" +
@@ -39,6 +41,7 @@ export default function RangeItem({ setting, sdk }) {
         aria-label={setting.param}
         min={setting.rangeStart}
         max={setting.rangeEnd}
+        step={setting.rangeStep || 1}
         valueLabelDisplay="auto"
         onChange={handleChange}
       />

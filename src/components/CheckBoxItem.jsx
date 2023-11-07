@@ -12,6 +12,10 @@ export default function CheckBoxItem({ setting, sdk }) {
           (appState) => appState.phase === 'appphase.playing'
         );
         await sdk.Settings.get(setting.param).then((data) => {
+          if (data === null) {
+            console.log('Warning - ' + setting.param + ' returned NULL');
+            data = false;
+          }
           setChecked(data);
         });
       }
@@ -20,7 +24,6 @@ export default function CheckBoxItem({ setting, sdk }) {
   }, [sdk]);
   const handleChange = (event) => {
     setChecked(!checked);
-    console.log(event);
     sdk.Settings.update(setting.param, event.target.checked);
     console.log(
       "sdk.Settings.update('" +

@@ -41,6 +41,7 @@ export default function ValueItem({ setting, sdk }) {
           "')"
       );
     }
+    setText(event.target.value);
   };
   return (
     <>

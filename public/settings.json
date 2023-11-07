@@ -26,6 +26,7 @@
       {
         "param": "ToursMetersPerSecond",
         "rangeStart": 0.25,
+        "rangeStep": 0.05,
         "rangeEnd": 10
       },
       {
@@ -36,7 +37,6 @@
         "param": "features/dollhouse-nudge",
         "desc": "Prompt to try new Dollhouse features"
       },
-
       {
         "param": "features/model-rating-dialog",
         "desc": "Prompt to rate model satisfaction"
@@ -44,9 +44,6 @@
       {
         "param": "features/model-rating-dialog-prompt",
         "desc": "Prompt to rate model satisfaction"
-      },
-      {
-        "param": "features/space-search"
       },
       {
         "param": "subscriber-prompt-active"
@@ -219,11 +216,13 @@
       {
         "param": "thickness",
         "rangeStart": 0.1,
+        "rangeStep": 0.01,
         "rangeEnd": 10
       },
       {
         "param": "wireframeOpacity",
         "rangeStart": 0.01,
+        "rangeStep": 0.01,
         "rangeEnd": 1
       },
       {
@@ -246,6 +245,7 @@
       {
         "param": "secondThickness",
         "rangeStart": 0.1,
+        "rangeStep": 0.01,
         "rangeEnd": 10
       }
     ]
@@ -273,11 +273,13 @@
       {
         "param": "squeezeMin",
         "rangeStart": 0.1,
+        "rangeStep": 0.01,
         "rangeEnd": 10
       },
       {
         "param": "squeezeMax",
         "rangeStart": 0.1,
+        "rangeStep": 0.01,
         "rangeEnd": 10
       }
     ]

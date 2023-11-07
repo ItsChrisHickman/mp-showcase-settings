@@ -1,6 +1,8 @@
 import * as React from 'react';
 import { useEffect, useState } from 'react';
-import TextField from '@mui/material/TextField';
+import FormControl from '@mui/material/FormControl';
+import InputLabel from '@mui/material/InputLabel';
+import Select from '@mui/material/Select';
 import MenuItem from '@mui/material/MenuItem';
 
 export default function OptionItem({ setting, sdk }) {
@@ -22,9 +24,14 @@ export default function OptionItem({ setting, sdk }) {
     fetchData().catch(console.error);
   }, [sdk]);
   const handleChange = (event) => {
-    sdk.Settings.update(setting.param, event.value);
+    setValue(event.target.value);
+    sdk.Settings.update(setting.param, event.target.value);
     console.log(
-      "sdk.Settings.update('" + setting.param + "', '" + event.value + "')"
+      "sdk.Settings.update('" +
+        setting.param +
+        "', '" +
+        event.target.value +
+        "')"
     );
   };
   const dropDownOptions = setting.options.map((x) => ({
@@ -33,13 +40,16 @@ export default function OptionItem({ setting, sdk }) {
   }));
   return (
     <>
-      <TextField select fullWidth label={setting.param} value={value}>
-        {dropDownOptions.map((option) => (
-          <MenuItem key={option.value} value={option.value}>
-            {option.label}
-          </MenuItem>
-        ))}
-      </TextField>
+      <FormControl fullWidth>
+        <InputLabel id="demo-simple-select-label">{setting.param}</InputLabel>
+        <Select label={setting.param} value={value} onChange={handleChange}>
+          {dropDownOptions.map((option) => (
+            <MenuItem key={option.value} value={option.value}>
+              {option.label}
+            </MenuItem>
+          ))}
+        </Select>
+      </FormControl>
     </>
   );
 }

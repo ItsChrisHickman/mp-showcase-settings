@@ -27,7 +27,6 @@ export default function App() {
 
   return (
     <>
-      <CssBaseline />
       <Header />
       <div className="App">
         <Container maxWidth="xl">
