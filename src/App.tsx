@@ -18,7 +18,7 @@ export default function App() {
     };
   }, []);
 
-  function handleConnect(mpSdk) {
+  function handleConnect(mpSdk: any) {
     console.log('SDK Connected and Loaded', mpSdk);
     setSdk(mpSdk);
   }
