@@ -1,12 +1,10 @@
 import './App.css';
-import * as React from 'react';
 import { useEffect, useState } from 'react';
 import Container from '@mui/material/Container';
 import Header from './components/Header';
 import Box from '@mui/material/Box';
 import Showcase from './components/Showcase';
 import SettingsList from './components/SettingsList';
-import CssBaseline from '@mui/material/CssBaseline';
 
 export default function App() {
   const [sdk, setSdk] = useState(null);

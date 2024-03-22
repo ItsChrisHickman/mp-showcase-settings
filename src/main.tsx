@@ -4,7 +4,7 @@ import { ThemeProvider, createTheme } from '@mui/material/styles';
 
 import App from './App';
 
-const rootElement = document.getElementById('root');
+const rootElement = document.getElementById('root')!; // Null Check!
 const root = createRoot(rootElement);
 
 const darkTheme = createTheme({

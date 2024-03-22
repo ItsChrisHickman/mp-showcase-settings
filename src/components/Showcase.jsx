@@ -1,7 +1,7 @@
 import * as React from 'react';
 
 export default function Showcase({ onConnect }) {
-  const sdkKey = 'yxszifc05b1bidcsqfr60806d';
+  const sdkKey = 'xtet8rr5t5i42rwanintd7rzb';
   const queryString = window.location.search;
   const urlParams = new URLSearchParams(queryString);
 
