@@ -6,4 +6,4 @@ This example was created as both a resource and an exercize in building a simple
 
 All settings in this application can be used with the Matterport Showcase SDK via `Settings.update('[setting name',value);`
 
-Try it on Stackblitz.com: [https://stackblitz.com/github/itschrishickman/mpsdk-showcase-settings](https://stackblitz.com/github/itschrishickman/mpsdk-showcase-settings)
+Try it in CodeSandbox: [https://codesandbox.io/p/devbox/github/ItsChrisHickman/mpsdk-showcase-settings](https://codesandbox.io/p/devbox/github/ItsChrisHickman/mpsdk-showcase-settings)
